@@ -56,8 +56,8 @@ class cootclco:
         sorted_indices = np.argsort(pop_fit)
         leaders_pos = pop_pos[sorted_indices[:self.leader_node]].copy()
         leaders_fit = pop_fit[sorted_indices[:self.leader_node]].copy()
-        followers_pos = pop_pos[sorted_indices[:self.leader_node]].copy()
-        followers_fit = pop_pos[sorted_indices[:self.leader_node]].copy()
+        followers_pos = pop_pos[sorted_indices[self.leader_node:]].copy()
+        followers_fit = pop_fit[sorted_indices[self.leader_node:]].copy()
 
         self.gBest_score = leaders_fit[0]
         self.gBest_pos = leaders_pos[0].copy()

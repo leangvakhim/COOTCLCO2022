@@ -25,7 +25,7 @@ class wsn:
         coverage_rate = covered_count / self.total_area_points
         return -coverage_rate
 
-    def visualize_network(sensors, w, h, rs, coverage):
+    def visualize_network(self, sensors, w, h, rs, coverage):
         fig, ax = plt.subplots(figsize=(8, 8))
         ax.set_xlim(0, w)
         ax.set_ylim(0, h)
@@ -37,6 +37,6 @@ class wsn:
             ax.plot(x, y, 'r.', markersize=5)
             ax.text(x, y, str(i), fontsize=8)
 
-        ax.set_title(f"WSN Coverages {coverage*100:.2f}")
+        ax.set_title(f"WSN Coverages {coverage}%")
         plt.grid(True)
         plt.show()
