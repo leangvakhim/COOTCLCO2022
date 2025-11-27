@@ -32,7 +32,7 @@ if opt == 1:
     best_sensors = best_pos.reshape((sensor_nodes, 2))
     wsn_prob.visualize_network(best_sensors, w, h, rs, final_coverage)
 elif opt == 2:
-    func_id = 2
+    func_id = 23
     func, lb, ub, dim = benchmark.get_function(func_id)
 
     pop_size = 30
